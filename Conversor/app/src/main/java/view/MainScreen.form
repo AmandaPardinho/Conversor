@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.9" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Container class="javax.swing.JPopupMenu" name="jPopupMenuTeste">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+    </Container>
+  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="title" type="java.lang.String" value="Conversor"/>
@@ -133,7 +141,7 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="37" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jButtonCheck" min="-2" pref="39" max="-2" attributes="0"/>
                       <Component id="jComboBoxEscolha" min="-2" max="-2" attributes="0"/>
@@ -146,12 +154,13 @@
       <SubComponents>
         <Component class="javax.swing.JComboBox" name="jComboBoxEscolha">
           <Properties>
+            <Property name="editable" type="boolean" value="true"/>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="4">
-                <StringItem index="0" value="Item 1"/>
-                <StringItem index="1" value="Item 2"/>
-                <StringItem index="2" value="Item 3"/>
-                <StringItem index="3" value="Item 4"/>
+                <StringItem index="0" value="Selecione o conversor"/>
+                <StringItem index="1" value="Moeda"/>
+                <StringItem index="2" value="Sistema Num&#xe9;rico"/>
+                <StringItem index="3" value="Dados"/>
               </StringArray>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -195,7 +204,6 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonCheckMouseClicked"/>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCheckActionPerformed"/>
           </Events>
         </Component>
@@ -271,7 +279,7 @@
                               <Component id="jTextFieldUnidade2" max="32767" attributes="0"/>
                               <Component id="jTextFieldUnidade1" alignment="0" max="32767" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                                   <Component id="jLabelValor" max="32767" attributes="0"/>
                               </Group>
                           </Group>
@@ -310,7 +318,7 @@
                   <Component id="jButtonConverter" min="-2" pref="30" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jTextFieldResultado" min="-2" pref="36" max="-2" attributes="0"/>
-                  <EmptySpace pref="32" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -361,12 +369,13 @@
         </Component>
         <Component class="javax.swing.JComboBox" name="jComboBoxSigla1">
           <Properties>
+            <Property name="editable" type="boolean" value="true"/>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="4">
-                <StringItem index="0" value="Item 1"/>
-                <StringItem index="1" value="Item 2"/>
-                <StringItem index="2" value="Item 3"/>
-                <StringItem index="3" value="Item 4"/>
+                <StringItem index="0" value="Selecione a moeda"/>
+                <StringItem index="1" value="D&#xf3;lar (USD)"/>
+                <StringItem index="2" value="Euro (EU)"/>
+                <StringItem index="3" value="Real (BRL)"/>
               </StringArray>
             </Property>
           </Properties>
@@ -376,12 +385,13 @@
         </Component>
         <Component class="javax.swing.JComboBox" name="jComboBoxSigla2">
           <Properties>
+            <Property name="editable" type="boolean" value="true"/>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="4">
-                <StringItem index="0" value="Item 1"/>
-                <StringItem index="1" value="Item 2"/>
-                <StringItem index="2" value="Item 3"/>
-                <StringItem index="3" value="Item 4"/>
+                <StringItem index="0" value="Selecione a moeda"/>
+                <StringItem index="1" value="D&#xf3;lar (USD)"/>
+                <StringItem index="2" value="Euro (EU)"/>
+                <StringItem index="3" value="Real (BRL)"/>
               </StringArray>
             </Property>
           </Properties>
@@ -408,7 +418,11 @@
                 </BevelBorder>
               </Border>
             </Property>
+            <Property name="horizontalTextPosition" type="int" value="0"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonConverterActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="jTextFieldResultado">
         </Component>
