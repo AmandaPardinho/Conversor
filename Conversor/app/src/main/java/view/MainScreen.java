@@ -33,6 +33,7 @@ public class MainScreen extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPopupMenuTeste = new javax.swing.JPopupMenu();
         jPanelTitulo = new javax.swing.JPanel();
         jLabelTitulo = new javax.swing.JLabel();
         jPanelCabecalho = new javax.swing.JPanel();
@@ -86,7 +87,8 @@ public class MainScreen extends javax.swing.JFrame {
 
         jPanelCabecalho.setBackground(new java.awt.Color(243, 239, 224));
 
-        jComboBoxEscolha.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxEscolha.setEditable(true);
+        jComboBoxEscolha.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione o conversor", "Moeda", "Sistema Numérico", "Dados" }));
         jComboBoxEscolha.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, new java.awt.Color(67, 66, 66)));
         jComboBoxEscolha.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jComboBoxEscolha.setMaximumSize(new java.awt.Dimension(144, 44));
@@ -100,11 +102,6 @@ public class MainScreen extends javax.swing.JFrame {
         jButtonCheck.setForeground(new java.awt.Color(34, 163, 159));
         jButtonCheck.setIcon(new javax.swing.ImageIcon(getClass().getResource("/check.png"))); // NOI18N
         jButtonCheck.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, null, java.awt.Color.darkGray));
-        jButtonCheck.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonCheckMouseClicked(evt);
-            }
-        });
         jButtonCheck.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCheckActionPerformed(evt);
@@ -125,7 +122,7 @@ public class MainScreen extends javax.swing.JFrame {
         jPanelCabecalhoLayout.setVerticalGroup(
             jPanelCabecalhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelCabecalhoLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(37, Short.MAX_VALUE)
                 .addGroup(jPanelCabecalhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButtonCheck, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jComboBoxEscolha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -181,15 +178,23 @@ public class MainScreen extends javax.swing.JFrame {
         jLabelSigla.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelSigla.setText("Moeda");
 
-        jComboBoxSigla1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxSigla1.setEditable(true);
+        jComboBoxSigla1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione a moeda", "Dólar (USD)", "Euro (EU)", "Real (BRL)" }));
 
-        jComboBoxSigla2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxSigla2.setEditable(true);
+        jComboBoxSigla2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione a moeda", "Dólar (USD)", "Euro (EU)", "Real (BRL)" }));
 
         jButtonConverter.setBackground(new java.awt.Color(34, 163, 159));
         jButtonConverter.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButtonConverter.setForeground(new java.awt.Color(34, 34, 34));
         jButtonConverter.setText("Converter");
         jButtonConverter.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, null, java.awt.Color.darkGray));
+        jButtonConverter.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButtonConverter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonConverterActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanelConversaoLayout = new javax.swing.GroupLayout(jPanelConversao);
         jPanelConversao.setLayout(jPanelConversaoLayout);
@@ -204,7 +209,7 @@ public class MainScreen extends javax.swing.JFrame {
                             .addComponent(jTextFieldUnidade2)
                             .addComponent(jTextFieldUnidade1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(jPanelConversaoLayout.createSequentialGroup()
-                                .addGap(35, 35, 35)
+                                .addGap(12, 12, 12)
                                 .addComponent(jLabelValor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanelConversaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -233,7 +238,7 @@ public class MainScreen extends javax.swing.JFrame {
                 .addComponent(jButtonConverter, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jTextFieldResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanelRodape.setBackground(new java.awt.Color(67, 66, 66));
@@ -296,6 +301,7 @@ public class MainScreen extends javax.swing.JFrame {
 
     private void jButtonCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCheckActionPerformed
         // TODO add your handling code here:
+        jPopupMenuTeste.setToolTipText("Funcionou!!!");
     }//GEN-LAST:event_jButtonCheckActionPerformed
 
     private void jTextFieldUnidade1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldUnidade1ActionPerformed
@@ -306,11 +312,9 @@ public class MainScreen extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBoxEscolhaActionPerformed
 
-    private void jButtonCheckMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonCheckMouseClicked
+    private void jButtonConverterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConverterActionPerformed
         // TODO add your handling code here:
-        jButtonCheck.addActionListener(jComboBoxEscolha);
-        
-    }//GEN-LAST:event_jButtonCheckMouseClicked
+    }//GEN-LAST:event_jButtonConverterActionPerformed
 
     /**
      * @param args the command line arguments
@@ -363,6 +367,7 @@ public class MainScreen extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelImagem;
     private javax.swing.JPanel jPanelRodape;
     private javax.swing.JPanel jPanelTitulo;
+    private javax.swing.JPopupMenu jPopupMenuTeste;
     private javax.swing.JTextField jTextFieldResultado;
     private javax.swing.JTextField jTextFieldUnidade1;
     private javax.swing.JTextField jTextFieldUnidade2;
