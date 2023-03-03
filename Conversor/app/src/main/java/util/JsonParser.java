@@ -12,7 +12,7 @@ import java.io.IOException;
  * @author amand
  */
 public class JsonParser {
-    public static String JsonEmString(BufferedReader buffereReader) throws IOException{
+    public static String jsonEmString(BufferedReader buffereReader) throws IOException{
         String resposta, jsonEmString = "";
         while((resposta = buffereReader.readLine()) != null){
             jsonEmString += resposta;
