@@ -48,8 +48,9 @@ public class MainScreen extends javax.swing.JFrame {
         jLabelSigla = new javax.swing.JLabel();
         jComboBoxSigla1 = new javax.swing.JComboBox<>();
         jComboBoxSigla2 = new javax.swing.JComboBox<>();
-        jButtonConverter = new javax.swing.JButton();
+        jButtonLimpar = new javax.swing.JButton();
         jTextFieldResultado = new javax.swing.JTextField();
+        jButtonConverter = new javax.swing.JButton();
         jPanelRodape = new javax.swing.JPanel();
         jLabelCopyright = new javax.swing.JLabel();
 
@@ -184,17 +185,22 @@ public class MainScreen extends javax.swing.JFrame {
         jComboBoxSigla2.setEditable(true);
         jComboBoxSigla2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione a moeda", "Dólar (USD)", "Euro (EU)", "Real (BRL)" }));
 
+        jButtonLimpar.setBackground(new java.awt.Color(34, 163, 159));
+        jButtonLimpar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButtonLimpar.setForeground(new java.awt.Color(34, 34, 34));
+        jButtonLimpar.setText("Limpar");
+        jButtonLimpar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButtonLimpar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButtonLimpar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonLimparActionPerformed(evt);
+            }
+        });
+
         jButtonConverter.setBackground(new java.awt.Color(34, 163, 159));
         jButtonConverter.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButtonConverter.setForeground(new java.awt.Color(34, 34, 34));
-        jButtonConverter.setText("Limpar");
-        jButtonConverter.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButtonConverter.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButtonConverter.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonConverterActionPerformed(evt);
-            }
-        });
+        jButtonConverter.setText("Converter");
 
         javax.swing.GroupLayout jPanelConversaoLayout = new javax.swing.GroupLayout(jPanelConversao);
         jPanelConversao.setLayout(jPanelConversaoLayout);
@@ -203,26 +209,32 @@ public class MainScreen extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelConversaoLayout.createSequentialGroup()
                 .addGap(40, 40, 40)
                 .addGroup(jPanelConversaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButtonConverter, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelConversaoLayout.createSequentialGroup()
-                        .addGroup(jPanelConversaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextFieldUnidade2)
-                            .addComponent(jTextFieldUnidade1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(jPanelConversaoLayout.createSequentialGroup()
-                                .addGap(12, 12, 12)
-                                .addComponent(jLabelValor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(jPanelConversaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextFieldUnidade2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE)
+                            .addComponent(jTextFieldUnidade1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE)
+                            .addComponent(jLabelValor, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanelConversaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jComboBoxSigla1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jComboBoxSigla1, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabelSigla, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jComboBoxSigla2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addComponent(jTextFieldResultado, javax.swing.GroupLayout.Alignment.LEADING))
+                            .addComponent(jComboBoxSigla2, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jTextFieldResultado, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelConversaoLayout.createSequentialGroup()
+                        .addComponent(jButtonConverter, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        jPanelConversaoLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButtonConverter, jButtonLimpar});
+
+        jPanelConversaoLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jComboBoxSigla1, jComboBoxSigla2, jTextFieldUnidade1, jTextFieldUnidade2});
+
         jPanelConversaoLayout.setVerticalGroup(
             jPanelConversaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelConversaoLayout.createSequentialGroup()
-                .addContainerGap(42, Short.MAX_VALUE)
+                .addContainerGap(41, Short.MAX_VALUE)
                 .addGroup(jPanelConversaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelValor)
                     .addComponent(jLabelSigla))
@@ -235,11 +247,17 @@ public class MainScreen extends javax.swing.JFrame {
                     .addComponent(jTextFieldUnidade2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jComboBoxSigla2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
-                .addComponent(jButtonConverter, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanelConversaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonConverter, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jTextFieldResultado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(20, Short.MAX_VALUE))
         );
+
+        jPanelConversaoLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButtonConverter, jButtonLimpar});
+
+        jPanelConversaoLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jComboBoxSigla1, jComboBoxSigla2, jTextFieldUnidade1, jTextFieldUnidade2});
 
         jPanelRodape.setBackground(new java.awt.Color(67, 66, 66));
 
@@ -312,9 +330,11 @@ public class MainScreen extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBoxEscolhaActionPerformed
 
-    private void jButtonConverterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConverterActionPerformed
+    private void jButtonLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLimparActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonConverterActionPerformed
+        jTextFieldUnidade1.setText("");
+        jTextFieldUnidade2.setText("");
+    }//GEN-LAST:event_jButtonLimparActionPerformed
 
     /**
      * @param args the command line arguments
@@ -354,6 +374,7 @@ public class MainScreen extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonCheck;
     private javax.swing.JButton jButtonConverter;
+    private javax.swing.JButton jButtonLimpar;
     private javax.swing.JComboBox<String> jComboBoxEscolha;
     private javax.swing.JComboBox<String> jComboBoxSigla1;
     private javax.swing.JComboBox<String> jComboBoxSigla2;
