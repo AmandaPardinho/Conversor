@@ -201,6 +201,7 @@ public class MainScreen extends javax.swing.JFrame {
         jButtonConverter.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButtonConverter.setForeground(new java.awt.Color(34, 34, 34));
         jButtonConverter.setText("Converter");
+        jButtonConverter.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         javax.swing.GroupLayout jPanelConversaoLayout = new javax.swing.GroupLayout(jPanelConversao);
         jPanelConversao.setLayout(jPanelConversaoLayout);
@@ -221,8 +222,9 @@ public class MainScreen extends javax.swing.JFrame {
                             .addComponent(jComboBoxSigla2, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jTextFieldResultado, javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelConversaoLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButtonConverter, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
                         .addComponent(jButtonLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -252,7 +254,7 @@ public class MainScreen extends javax.swing.JFrame {
                     .addComponent(jButtonConverter, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jTextFieldResultado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         jPanelConversaoLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButtonConverter, jButtonLimpar});
