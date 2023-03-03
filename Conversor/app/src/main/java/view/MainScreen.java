@@ -187,7 +187,7 @@ public class MainScreen extends javax.swing.JFrame {
         jButtonConverter.setBackground(new java.awt.Color(34, 163, 159));
         jButtonConverter.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButtonConverter.setForeground(new java.awt.Color(34, 34, 34));
-        jButtonConverter.setText("Converter");
+        jButtonConverter.setText("Limpar");
         jButtonConverter.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButtonConverter.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButtonConverter.addActionListener(new java.awt.event.ActionListener() {
