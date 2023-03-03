@@ -288,8 +288,9 @@
                       </Group>
                       <Component id="jTextFieldResultado" alignment="0" max="32767" attributes="0"/>
                       <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           <Component id="jButtonConverter" linkSize="1" min="-2" pref="85" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="jButtonLimpar" linkSize="1" min="-2" pref="91" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -322,7 +323,7 @@
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jTextFieldResultado" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="20" max="32767" attributes="0"/>
+                  <EmptySpace pref="21" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -440,6 +441,11 @@
               <Color blue="22" green="22" red="22" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Converter"/>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                <BevelBorder/>
+              </Border>
+            </Property>
           </Properties>
         </Component>
       </SubComponents>
